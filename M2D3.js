@@ -166,6 +166,21 @@ if (totalShoppingCart < 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let totalShoppingCart = 50
+const shipping = 10
+let blackFriday = true // in caso di  Black Friday viene applicato il 20% di sconto sul carrello
+
+if (blackFriday) {
+    totalShoppingCart = totalShoppingCart * 0.8
+} 
+
+if (totalShoppingCart < 50) {
+  totalShoppingCart = (totalShoppingCart + shipping)
+  console.log(totalShoppingCart)
+} else if (totalShoppingCart => 50) {
+  console.log(totalShoppingCart)
+}
+
 
 
 /*  ESERCIZIO EXTRA 4
@@ -174,8 +189,43 @@ if (totalShoppingCart < 50) {
   Es. se isMale e' vero, il valore di gender deve essere "male"
 */
 
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let isMale = false
+let gender 
+
+if (isMale) {
+    gender = "Male"
+    console.log(gender)
+} else if (!isMale) {
+    gender = "Female"
+    console.log(gender)
+}
+
+
 
 /* ESERCIZIO EXTRA 5
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3 (operatore modulo!), stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
+
+for (let i=0; i < 101; i++) {
+  switch (i) {
+  default:
+  if (i === 0){
+      console.log(i)
+  } else if (i % 3 === 0 && i % 5 === 0 ){ 
+      console.log("FizzBuzz")
+  } else if (i % 3 === 0){
+      console.log("Fizz")
+  } else if (i % 5 === 0){
+      console.log("Buzz")
+  } else if (i % 5 !== 0){
+      console.log(i)
+  } else if (i % 3 !== 0){
+      console.log(i)
+  } else if (i === 0){
+      console.log(i)
+  }
+}
+}
