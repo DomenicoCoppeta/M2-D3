@@ -224,8 +224,6 @@ for (let i=0; i < 101; i++) {
       console.log(i)
   } else if (i % 3 !== 0){
       console.log(i)
-  } else if (i === 0){
-      console.log(i)
   }
 }
 }
